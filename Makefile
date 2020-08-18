@@ -54,7 +54,6 @@ app:: rebar.config
 
 GOPATH := $(ERLANG_MK_TMP)/gopath
 export GOPATH
-export GO111MODULE=on
 
 H2SPECD := $(GOPATH)/src/github.com/summerwind/h2spec/h2specd
 export H2SPECD
