@@ -9,9 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: ${{ matrix.container }}
     strategy:
       matrix:
         go: [ '1.15', '1.14', '1.13', '1.12', '1.11' ]
+        container: ['ubuntu:16.04', 'ubuntu:18.04', 'alpine:3']
 
     steps:
     - uses: actions/checkout@v2
