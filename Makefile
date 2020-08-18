@@ -65,10 +65,8 @@ test-build:: $(H2SPECD)
 $(H2SPECD):
 	$(gen_verbose) mkdir -p $(GOPATH)/src/github.com/summerwind
 	-$(verbose) git clone --depth 1 https://github.com/summerwind/h2spec $(dir $(H2SPECD))
-	-$(verbose) $(MAKE) -C $(dir $(H2SPECD)) build MAKEFLAGS=
-	$(verbose) cd $(dir $(H2SPECD)) && go build -o $(H2SPECD) cmd/h2specd/h2specd.go
-#	$(verbose) go build $(dir $(H2SPECD)) -o $(H2SPECD) cmd/h2specd/h2specd.go
-#	$(verbose) cd $(dir $(H2SPECD)) && go build -o $(H2SPECD) cmd/h2specd/h2specd.go
+	-$(verbose) GO111MODULE=on $(MAKE) -C $(dir $(H2SPECD)) build MAKEFLAGS=
+	$(verbose) cd $(dir $(H2SPECD)) && GO111MODULE=on go build -o $(H2SPECD) cmd/h2specd/h2specd.go
 
 # Public suffix module generator.
 # https://publicsuffix.org/list/
