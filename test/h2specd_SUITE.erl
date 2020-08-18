@@ -29,7 +29,8 @@ init_per_suite(Config) ->
 		false -> {skip, "$H2SPECD isn't set."};
 		H2specd ->
 			case filelib:is_file(H2specd) of
-				false -> {skip, "$H2SPECD file not found."};
+				false -> io:format(user, "$H2SPECD file not found: ~s~n", [H2specd]),
+                                         {skip, "$H2SPECD file not found."};
 				true ->
 					%% We ensure that SASL is started for this test suite
 					%% to have the crash reports in the CT logs.
