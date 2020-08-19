@@ -1,8 +1,8 @@
-name: 
+name:
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master,  tmp_build_tests]
   pull_request:
     branches: [ master ]
 
@@ -19,9 +19,9 @@ jobs:
     - uses: actions/checkout@v2
     - uses: gleam-lang/setup-erlang@v1.1.0
       with:
-        otp-version: 22.1  
+        otp-version: 22.1
     - uses: actions/setup-go@v2
       with:
-        go-version: ${{ matrix.go }}  
+        go-version: ${{ matrix.go }}
     - name: Run tests
       run: make tests
