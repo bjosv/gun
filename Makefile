@@ -56,6 +56,9 @@ export GO111MODULE=on
 GOPATH := $(ERLANG_MK_TMP)/gopath
 export GOPATH
 
+GOFLAGS := -modcacherw
+export GOFLAGS
+
 H2SPECD := $(GOPATH)/src/github.com/summerwind/h2spec/h2specd
 export H2SPECD
 
