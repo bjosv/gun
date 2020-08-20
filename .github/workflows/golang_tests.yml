@@ -21,6 +21,9 @@ jobs:
     - uses: actions/setup-go@v2
       with:
         go-version: ${{ matrix.go }}
+    - name: Install dep
+      run: |
+            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
     - name: Run tests 1
       run: make tests
     - name: Run tests 2
