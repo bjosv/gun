@@ -64,7 +64,7 @@ h2specd(Config) ->
 start_port(Config, Pid) ->
 	H2specd = os:getenv("H2SPECD"),
 	Port = open_port(
-		{spawn, H2specd ++ " -S -p 45678"},
+		{spawn, H2specd ++ " -v -S -p 45678"},
 		[{line, 10000}, {cd, config(priv_dir, Config)}, binary, exit_status]),
 	Pid ! ready,
 	receive_infinity(Port, []).

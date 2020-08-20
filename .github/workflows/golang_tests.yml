@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        go: [ '1.15', '1.14', '1.13', '1.12', '1.11' ]
+        go: [ '1.15', '1.14' ]
 
     steps:
     - uses: actions/checkout@v2
@@ -21,5 +21,23 @@ jobs:
     - uses: actions/setup-go@v2
       with:
         go-version: ${{ matrix.go }}
-    - name: Run tests
+    - name: Run tests 1
+      run: make tests
+    - name: Run tests 2
+      run: make tests
+    - name: Run tests 3
+      run: make tests
+    - name: Run tests 4
+      run: make tests
+    - name: Run tests 5
+      run: make tests
+    - name: Run tests 6
+      run: make tests
+    - name: Run tests 7
+      run: make tests
+    - name: Run tests 8
+      run: make tests
+    - name: Run tests 9
+      run: make tests
+    - name: Run tests 10
       run: make tests
