@@ -51,7 +51,7 @@ TEST_ERLC_OPTS += +'{parse_transform, eunit_autoexport}'
 app:: rebar.config
 
 # h2specd setup.
-H2SPECD_VERSION = v2.2.1
+H2SPECD_VERSION = v2.2.0
 
 GOPATH := $(ERLANG_MK_TMP)/gopath
 export GOPATH
