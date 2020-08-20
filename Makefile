@@ -51,6 +51,8 @@ TEST_ERLC_OPTS += +'{parse_transform, eunit_autoexport}'
 app:: rebar.config
 
 # h2specd setup.
+H2SPECD_VERSION = v2.2.0
+
 GOPATH := $(ERLANG_MK_TMP)/gopath
 export GOPATH
 
@@ -66,7 +68,7 @@ test-build:: $(H2SPECD)
 
 $(H2SPECD):
 	$(gen_verbose) mkdir -p $(GOPATH)/src/github.com/summerwind
-	-$(verbose) git clone --depth 1 --branch v2.2.0 https://github.com/summerwind/h2spec $(dir $(H2SPECD))
+	-$(verbose) git clone --depth 1 --branch $(H2SPECD_VERSION) https://github.com/summerwind/h2spec $(dir $(H2SPECD))
 	-$(MAKE) -C $(dir $(H2SPECD)) build MAKEFLAGS=
 	-cd $(dir $(H2SPECD)) && go build -o h2specd cmd/h2spec/h2specd.go
 
