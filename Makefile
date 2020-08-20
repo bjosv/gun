@@ -51,7 +51,7 @@ TEST_ERLC_OPTS += +'{parse_transform, eunit_autoexport}'
 app:: rebar.config
 
 # h2specd setup.
-H2SPECD_VERSION = v2.2.1
+H2SPECD_VERSION = v2.3.0
 
 GOPATH := $(ERLANG_MK_TMP)/gopath
 export GOPATH
@@ -59,7 +59,7 @@ export GOPATH
 GOFLAGS := -modcacherw
 export GOFLAGS
 
-H2SPECD := $(GOPATH)/src/github.com/summerwind/h2spec/h2specd
+H2SPECD := $(GOPATH)/src/github.com/summerwind/h2specd/h2specd
 export H2SPECD
 
 # @todo It would be better to allow these dependencies to be specified
