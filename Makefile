@@ -56,7 +56,7 @@ app:: rebar.config
 # Before "Handle connection close in Windows properly"
 #H2SPECD_VERSION = ab3a8b8002dcdd767644bd98567de1dd11902113
 # Handle connection close in Windows properly
-H2SPECD_VERSION = e14312ddecf3ab24157b5ec72a1c1aa9a9331fe3
+#H2SPECD_VERSION = e14312ddecf3ab24157b5ec72a1c1aa9a9331fe3
 
 GOPATH := $(ERLANG_MK_TMP)/gopath
 export GOPATH
@@ -74,10 +74,11 @@ test-build:: $(H2SPECD)
 $(H2SPECD):
 	$(gen_verbose) mkdir -p $(GOPATH)/src/github.com/summerwind
 	-$(verbose) git clone https://github.com/summerwind/h2spec $(dir $(H2SPECD))
-	-$(verbose) cd $(dir $(H2SPECD)) && git checkout $(H2SPECD_VERSION)
+	-$(verbose) cd $(dir $(H2SPECD)) && git revert --no-edit e14312ddecf3ab24157b5ec72a1c1aa9a9331fe3
 	-$(MAKE) -C $(dir $(H2SPECD)) build MAKEFLAGS=
 	-$(GOPATH)/src/github.com/summerwind/h2spec/h2spec --version
 	-cd $(dir $(H2SPECD)) && go build -o h2specd cmd/h2specd/h2specd.go
+# -$(verbose) cd $(dir $(H2SPECD)) && git checkout $(H2SPECD_VERSION)
 #	-cd $(dir $(H2SPECD)) && go build -o h2specd cmd/h2specd/h2specd.go # 2.2.1, dep
 #	-cd $(dir $(H2SPECD)) && go build -o h2specd cmd/h2spec/h2specd.go # 2.2.0, glide
 
