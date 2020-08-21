@@ -73,8 +73,7 @@ test-build:: $(H2SPECD)
 
 $(H2SPECD):
 	$(gen_verbose) mkdir -p $(GOPATH)/src/github.com/summerwind
-	-$(verbose) git clone https://github.com/summerwind/h2spec $(dir $(H2SPECD))
-	-$(verbose) cd $(dir $(H2SPECD)) && git revert --no-edit e14312ddecf3ab24157b5ec72a1c1aa9a9331fe3
+	-$(verbose) git clone -b correction https://github.com/bjosv/h2spec $(dir $(H2SPECD))
 	-$(MAKE) -C $(dir $(H2SPECD)) build MAKEFLAGS=
 	-$(GOPATH)/src/github.com/summerwind/h2spec/h2spec --version
 	-cd $(dir $(H2SPECD)) && go build -o h2specd cmd/h2specd/h2specd.go
