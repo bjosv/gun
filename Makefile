@@ -75,7 +75,7 @@ $(H2SPECD):
 	-$(verbose) cd $(dir $(H2SPECD)) && git checkout $(H2SPECD_VERSION)
 	-$(MAKE) -C $(dir $(H2SPECD)) build MAKEFLAGS=
 	-$(GOPATH)/src/github.com/summerwind/h2spec/h2spec --version
-	-cd $(dir $(H2SPECD)) && go build -o h2specd cmd/h2spec/h2specd.go
+	-cd $(dir $(H2SPECD)) && go build -o h2specd cmd/h2specd/h2specd.go
 #	-cd $(dir $(H2SPECD)) && go build -o h2specd cmd/h2specd/h2specd.go # 2.2.1, dep
 #	-cd $(dir $(H2SPECD)) && go build -o h2specd cmd/h2spec/h2specd.go # 2.2.0, glide
 
