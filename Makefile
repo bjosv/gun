@@ -52,7 +52,9 @@ app:: rebar.config
 
 # h2specd setup.
 #H2SPECD_VERSION = v2.2.1
-H2SPECD_VERSION = f1075ae98b06262b51d0276b958ef607ba516c25
+#H2SPECD_VERSION = f1075ae98b06262b51d0276b958ef607ba516c25
+# Before "Handle connection close in Windows properly"
+H2SPECD_VERSION = ab3a8b8002dcdd767644bd98567de1dd11902113
 
 GOPATH := $(ERLANG_MK_TMP)/gopath
 export GOPATH
