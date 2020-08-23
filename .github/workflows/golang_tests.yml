@@ -21,29 +21,43 @@ jobs:
     - uses: actions/setup-go@v2
       with:
         go-version: ${{ matrix.go }}
-    - name: Install dep
-      run: |
-            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-    - name: Install glide
-      run: |
-            curl https://glide.sh/get | sh
     - name: Run tests 1
-      run: make tests
+      run: make ct-h2specd
     - name: Run tests 2
-      run: make tests
+      run: make ct-h2specd
     - name: Run tests 3
-      run: make tests
+      run: make ct-h2specd
     - name: Run tests 4
-      run: make tests
+      run: make ct-h2specd
     - name: Run tests 5
-      run: make tests
+      run: make ct-h2specd
     - name: Run tests 6
-      run: make tests
+      run: make ct-h2specd
     - name: Run tests 7
-      run: make tests
+      run: make ct-h2specd
     - name: Run tests 8
-      run: make tests
+      run: make ct-h2specd
     - name: Run tests 9
-      run: make tests
+      run: make ct-h2specd
     - name: Run tests 10
-      run: make tests
+      run: make ct-h2specd
+    - name: Run tests 11
+      run: make ct-h2specd
+    - name: Run tests 12
+      run: make ct-h2specd
+    - name: Run tests 13
+      run: make ct-h2specd
+    - name: Run tests 14
+      run: make ct-h2specd
+    - name: Run tests 15
+      run: make ct-h2specd
+    - name: Run tests 16
+      run: make ct-h2specd
+    - name: Run tests 17
+      run: make ct-h2specd
+    - name: Run tests 18
+      run: make ct-h2specd
+    - name: Run tests 19
+      run: make ct-h2specd
+    - name: Run tests 20
+      run: make ct-h2specd
