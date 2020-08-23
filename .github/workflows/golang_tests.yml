@@ -1,4 +1,4 @@
-name:
+name: Ubuntu
 
 on:
   push:
@@ -8,11 +8,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         go: [ '1.15', '1.14' ]
 
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - uses: gleam-lang/setup-erlang@v1.1.0
