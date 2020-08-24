@@ -61,3 +61,63 @@ jobs:
       run: make ct-h2specd
     - name: Run tests 20
       run: make ct-h2specd
+    - name: Run tests 21
+      run: make ct-h2specd
+    - name: Run tests 22
+      run: make ct-h2specd
+    - name: Run tests 23
+      run: make ct-h2specd
+    - name: Run tests 24
+      run: make ct-h2specd
+    - name: Run tests 25
+      run: make ct-h2specd
+    - name: Run tests 26
+      run: make ct-h2specd
+    - name: Run tests 27
+      run: make ct-h2specd
+    - name: Run tests 28
+      run: make ct-h2specd
+    - name: Run tests 29
+      run: make ct-h2specd
+    - name: Run tests 30
+      run: make ct-h2specd
+    - name: Run tests 31
+      run: make ct-h2specd
+    - name: Run tests 32
+      run: make ct-h2specd
+    - name: Run tests 33
+      run: make ct-h2specd
+    - name: Run tests 34
+      run: make ct-h2specd
+    - name: Run tests 35
+      run: make ct-h2specd
+    - name: Run tests 36
+      run: make ct-h2specd
+    - name: Run tests 37
+      run: make ct-h2specd
+    - name: Run tests 38
+      run: make ct-h2specd
+    - name: Run tests 39
+      run: make ct-h2specd
+    - name: Run tests 40
+      run: make ct-h2specd
+    - name: Run tests 41
+      run: make ct-h2specd
+    - name: Run tests 42
+      run: make ct-h2specd
+    - name: Run tests 43
+      run: make ct-h2specd
+    - name: Run tests 44
+      run: make ct-h2specd
+    - name: Run tests 45
+      run: make ct-h2specd
+    - name: Run tests 46
+      run: make ct-h2specd
+    - name: Run tests 47
+      run: make ct-h2specd
+    - name: Run tests 48
+      run: make ct-h2specd
+    - name: Run tests 49
+      run: make ct-h2specd
+    - name: Run tests 50
+      run: make ct-h2specd
