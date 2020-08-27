@@ -18,6 +18,7 @@ install:
   - tar -xvf go1.15.linux-amd64.tar.gz
   - pwd
   - ls -la
+  - cd go1.15.linux-amd64
   - sudo chown -R root:root ./go
   - sudo mv go /usr/local
   - export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
