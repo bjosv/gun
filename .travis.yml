@@ -14,12 +14,57 @@ notifications:
 install:
   - wget -c https://github.com/erlang/rebar3/releases/download/3.13.1/rebar3 && chmod +x rebar3
   - git clone https://github.com/inaka/elvis.git && cd elvis && rebar3 escriptize && sudo cp _build/default/bin/elvis /usr/bin && cd ..
-  - go version
-  - gimme -h
-  - gimme -l
-  - eval "$(gimme 1.15)"
-  - go version
+  - eval "$(gimme 1.14)"
 
 script:
   - go version
-  - make tests
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
+  - make ct-h2specd
