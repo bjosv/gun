@@ -14,16 +14,12 @@ notifications:
 install:
   - wget -c https://github.com/erlang/rebar3/releases/download/3.13.1/rebar3 && chmod +x rebar3
   - git clone https://github.com/inaka/elvis.git && cd elvis && rebar3 escriptize && sudo cp _build/default/bin/elvis /usr/bin && cd ..
-  - curl -O https://storage.googleapis.com/golang/go1.15.linux-amd64.tar.gz
-  - tar -xvf go1.15.linux-amd64.tar.gz
-  - pwd
-  - ls -la
-  - which go
-  - export PATH=$PATH:~/go/bin
-  - which go
+  - go version
+  - gimme -h
+  - gimme -l
+  - eval "$(gimme 1.15)"
   - go version
 
 script:
-  - which go
   - go version
   - make tests
